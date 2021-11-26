@@ -1,5 +1,4 @@
-# Archiver.
-My first project implemented on QT, because code a little doesn't look good                                                                           
+# Archiver.                                                                          
 Not implemented:                                                                
 "Path save" -> create folder on desktop, and all compressed files put into it  
 "Password" -> add password into compressed files                                 
