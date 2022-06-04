@@ -43,7 +43,8 @@
     </property>
     <property name="font">
      <font>
-      <italic>true</italic>
+      <family>Alegreya Sans SC</family>
+      <italic>false</italic>
       <bold>true</bold>
       <underline>false</underline>
       <strikeout>false</strikeout>
@@ -69,7 +70,8 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
-      <italic>true</italic>
+      <family>Alegreya Sans SC</family>
+      <italic>false</italic>
       <bold>true</bold>
       <underline>false</underline>
       <strikeout>false</strikeout>
@@ -95,7 +97,8 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
-      <italic>true</italic>
+      <family>Alegreya Sans SC</family>
+      <italic>false</italic>
       <bold>true</bold>
       <underline>false</underline>
       <strikeout>false</strikeout>
@@ -121,6 +124,7 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <italic>true</italic>
       <bold>true</bold>
       <underline>false</underline>
@@ -147,6 +151,7 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <italic>true</italic>
       <bold>true</bold>
       <underline>false</underline>
@@ -172,15 +177,16 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </rect>
     </property>
     <property name="font">
-     <font/>
+     <font>
+      <family>Alegreya Sans SC</family>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0));
-border-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0));
-color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:0 rgba(0, 0, 0, 255));</string>
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="title">
      <string>Themes</string>
@@ -196,7 +202,9 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </property>
      <property name="font">
       <font>
+       <family>Alegreya Sans SC</family>
        <pointsize>8</pointsize>
+       <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
@@ -217,7 +225,9 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </property>
      <property name="font">
       <font>
+       <family>Alegreya Sans SC</family>
        <pointsize>8</pointsize>
+       <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
@@ -238,7 +248,9 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </property>
      <property name="font">
       <font>
+       <family>Alegreya Sans SC</family>
        <pointsize>8</pointsize>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -256,7 +268,9 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </property>
      <property name="font">
       <font>
+       <family>Alegreya Sans SC</family>
        <pointsize>8</pointsize>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -274,7 +288,9 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </property>
      <property name="font">
       <font>
+       <family>Alegreya Sans SC</family>
        <pointsize>8</pointsize>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -292,7 +308,9 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </property>
      <property name="font">
       <font>
+       <family>Alegreya Sans SC</family>
        <pointsize>8</pointsize>
+       <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
@@ -312,7 +330,10 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
       </rect>
      </property>
      <property name="font">
-      <font/>
+      <font>
+       <family>Alegreya Sans SC</family>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>Theme 7</string>
@@ -328,7 +349,10 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
       </rect>
      </property>
      <property name="font">
-      <font/>
+      <font>
+       <family>Alegreya Sans SC</family>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>Theme 8</string>
@@ -344,47 +368,30 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
       </rect>
      </property>
      <property name="font">
-      <font/>
+      <font>
+       <family>Alegreya Sans SC</family>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>Theme 9</string>
      </property>
     </widget>
    </widget>
-   <widget class="QLabel" name="label_6">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>771</width>
-      <height>551</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.478, y1:1, x2:0.489112, y2:0, stop:0.101124 rgba(45, 73, 68, 66), stop:0.5 rgba(137, 221, 206, 66), stop:0.859551 rgba(50, 81, 76, 66));</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../build-32bit-Desktop_Qt_5_12_11_MinGW_32_bit-Debug/picture/ввав.jpg</pixmap>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_tx">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>460</y>
-      <width>731</width>
+      <width>441</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <pointsize>11</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -405,7 +412,9 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <pointsize>9</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -423,6 +432,7 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <italic>true</italic>
       <bold>true</bold>
       <underline>false</underline>
@@ -449,6 +459,7 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <italic>true</italic>
       <bold>true</bold>
       <underline>false</underline>
@@ -474,12 +485,13 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </rect>
     </property>
     <property name="font">
-     <font/>
+     <font>
+      <family>Alegreya Sans SC</family>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0));
-border-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0));
-color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:0 rgba(0, 0, 0, 255));</string>
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="title">
      <string>Possibilities</string>
@@ -495,7 +507,9 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </property>
      <property name="font">
       <font>
+       <family>Alegreya Sans SC</family>
        <pointsize>10</pointsize>
+       <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
@@ -516,7 +530,9 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </property>
      <property name="font">
       <font>
+       <family>Alegreya Sans SC</family>
        <pointsize>10</pointsize>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -534,7 +550,9 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </property>
      <property name="font">
       <font>
+       <family>Alegreya Sans SC</family>
        <pointsize>10</pointsize>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -552,7 +570,9 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </property>
      <property name="font">
       <font>
+       <family>Alegreya Sans SC</family>
        <pointsize>10</pointsize>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -571,11 +591,13 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <pointsize>12</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>13:24:32</string>
@@ -592,6 +614,7 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <italic>true</italic>
       <bold>true</bold>
       <underline>false</underline>
@@ -618,14 +641,16 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <pointsize>11</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>01.09.2020</string>
@@ -642,7 +667,9 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <pointsize>10</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -659,12 +686,13 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </rect>
     </property>
     <property name="font">
-     <font/>
+     <font>
+      <family>Alegreya Sans SC</family>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0));
-border-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0));
-color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:0 rgba(0, 0, 0, 255));</string>
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="title">
      <string>Details</string>
@@ -679,7 +707,10 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
       </rect>
      </property>
      <property name="font">
-      <font/>
+      <font>
+       <family>Alegreya Sans SC</family>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>Show path</string>
@@ -695,7 +726,10 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
       </rect>
      </property>
      <property name="font">
-      <font/>
+      <font>
+       <family>Alegreya Sans SC</family>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>Show size</string>
@@ -711,7 +745,10 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
       </rect>
      </property>
      <property name="font">
-      <font/>
+      <font>
+       <family>Alegreya Sans SC</family>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>Password</string>
@@ -727,7 +764,10 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
       </rect>
      </property>
      <property name="font">
-      <font/>
+      <font>
+       <family>Alegreya Sans SC</family>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>Symbols</string>
@@ -743,7 +783,10 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
       </rect>
      </property>
      <property name="font">
-      <font/>
+      <font>
+       <family>Alegreya Sans SC</family>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>Output</string>
@@ -759,7 +802,10 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
       </rect>
      </property>
      <property name="font">
-      <font/>
+      <font>
+       <family>Alegreya Sans SC</family>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>Path save</string>
@@ -776,7 +822,10 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </rect>
     </property>
     <property name="font">
-     <font/>
+     <font>
+      <family>Alegreya Sans SC</family>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0));
@@ -795,8 +844,13 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <pointsize>10</pointsize>
+      <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>SYMBOLS:</string>
@@ -813,8 +867,13 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <pointsize>10</pointsize>
+      <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>SIZE:</string>
@@ -831,8 +890,13 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <pointsize>10</pointsize>
+      <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>TextLabel</string>
@@ -849,8 +913,13 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <pointsize>10</pointsize>
+      <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>TextLabel</string>
@@ -867,8 +936,13 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <family>Alegreya Sans SC</family>
+      <pointsize>9</pointsize>
+      <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>OUTPUT:</string>
@@ -885,9 +959,14 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <pointsize>10</pointsize>
-      <italic>true</italic>
+      <italic>false</italic>
+      <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>TextLabel</string>
@@ -904,6 +983,7 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <italic>true</italic>
       <bold>true</bold>
       <underline>false</underline>
@@ -929,7 +1009,10 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </rect>
     </property>
     <property name="font">
-     <font/>
+     <font>
+      <family>Alegreya Sans SC</family>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0));
@@ -948,7 +1031,9 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <pointsize>10</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -966,6 +1051,7 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <italic>true</italic>
       <bold>true</bold>
       <underline>false</underline>
@@ -991,12 +1077,13 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </rect>
     </property>
     <property name="font">
-     <font/>
+     <font>
+      <family>Alegreya Sans SC</family>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0));
-border-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0));
-color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:0 rgba(0, 0, 0, 255));</string>
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="title">
      <string>Extension</string>
@@ -1011,7 +1098,10 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
       </rect>
      </property>
      <property name="font">
-      <font/>
+      <font>
+       <family>Alegreya Sans SC</family>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>.txt</string>
@@ -1027,7 +1117,10 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
       </rect>
      </property>
      <property name="font">
-      <font/>
+      <font>
+       <family>Alegreya Sans SC</family>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>.mp3</string>
@@ -1043,7 +1136,10 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
       </rect>
      </property>
      <property name="font">
-      <font/>
+      <font>
+       <family>Alegreya Sans SC</family>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>.mp4</string>
@@ -1059,7 +1155,10 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
       </rect>
      </property>
      <property name="font">
-      <font/>
+      <font>
+       <family>Alegreya Sans SC</family>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>.png</string>
@@ -1075,7 +1174,10 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
       </rect>
      </property>
      <property name="font">
-      <font/>
+      <font>
+       <family>Alegreya Sans SC</family>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>.jpeg</string>
@@ -1091,7 +1193,10 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
       </rect>
      </property>
      <property name="font">
-      <font/>
+      <font>
+       <family>Alegreya Sans SC</family>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>.jpg</string>
@@ -1108,7 +1213,10 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </rect>
     </property>
     <property name="font">
-     <font/>
+     <font>
+      <family>Alegreya Sans SC</family>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="text">
      <string>Current file name</string>
@@ -1125,7 +1233,9 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <pointsize>9</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -1143,7 +1253,9 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     </property>
     <property name="font">
      <font>
+      <family>Alegreya Sans SC</family>
       <pointsize>9</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -1163,7 +1275,10 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </rect>
     </property>
     <property name="font">
-     <font/>
+     <font>
+      <family>Alegreya Sans SC</family>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0));
@@ -1184,13 +1299,204 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </rect>
     </property>
     <property name="font">
-     <font/>
+     <font>
+      <family>Alegreya Sans SC</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>PASSWORD</string>
     </property>
    </widget>
-   <zorder>label_6</zorder>
+   <widget class="QLabel" name="Picture">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>761</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Alegreya Sans SC</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../build-New32Version-Desktop_Qt_5_15_1_MinGW_32_bit-Release/release/pictures/4.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="HistoryView">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>60</y>
+      <width>371</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Alegreya Sans SC</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0));
+color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>430</y>
+      <width>271</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Alegreya Sans SC</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0));
+border-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0));
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="maxLength">
+     <number>200</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_11">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>430</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Alegreya Sans SC</family>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0));
+border-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0));
+color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:0 rgba(0, 0, 0, 255));</string>
+    </property>
+    <property name="text">
+     <string>Select</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_12">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>460</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Alegreya Sans SC</family>
+      <italic>true</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0));
+border-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0));
+color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:0 rgba(0, 0, 0, 255));</string>
+    </property>
+    <property name="text">
+     <string>Priority</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="verticalSlider">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>0</y>
+      <width>191</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>9</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_13">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>150</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Alegreya Sans SC</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0));
+border-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0));
+color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:0 rgba(0, 0, 0, 255));</string>
+    </property>
+    <property name="text">
+     <string>Clear</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>30</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Alegreya Sans SC</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <zorder>Picture</zorder>
    <zorder>pushButton_6</zorder>
    <zorder>pushButton_7</zorder>
    <zorder>pushButton_2</zorder>
@@ -1224,6 +1530,13 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
    <zorder>label_23</zorder>
    <zorder>lineEdit_3</zorder>
    <zorder>label_24</zorder>
+   <zorder>HistoryView</zorder>
+   <zorder>lineEdit_4</zorder>
+   <zorder>pushButton_11</zorder>
+   <zorder>pushButton_12</zorder>
+   <zorder>verticalSlider</zorder>
+   <zorder>pushButton_13</zorder>
+   <zorder>label</zorder>
   </widget>
  </widget>
  <resources/>

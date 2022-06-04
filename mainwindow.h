@@ -17,6 +17,10 @@ public:
 
 private slots:
 
+    void ChangeWidgStyle(QString &ColorStyle);
+
+    void ChangeWidgColor(QString &color);
+
     void updateTime();
 
     void on_pushButton_clicked();
@@ -92,6 +96,14 @@ private slots:
     void on_radioButton_15_clicked();
 
     void on_checkBox_10_clicked();
+
+    void on_checkBox_10_stateChanged(int arg1);
+
+    void on_pushButton_12_clicked();
+
+    void on_pushButton_13_clicked();
+
+    void on_pushButton_11_clicked();
 
 private:
     Ui::MainWindow *ui;

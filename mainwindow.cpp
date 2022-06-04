@@ -22,36 +22,17 @@
 #include <QAbstractScrollArea>
 
 
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
 
-     // background photos
-    const QString poc =  "pictures/9.jpg";
-    const QString poc1 = "pictures/8.jpg";
-    const QString poc2 = "pictures/1.jpg";
-    const QString poc3 = "pictures/6.jpg";
-    const QString poc4 = "pictures/4.jpg";
-    const QString poc5 = "pictures/5.jpg";
-    const QString poc6 = "pictures/2.jpg";
-    const QString poc7 = "pictures/0.jpg";
-    const QString poc8 = "pictures/7.jpg";
-    const QString poc9 = "pictures/9.jpg";
-
-
     ui->setupUi(this);
 
 
-
-    //--------------------
+    // Default Setings on the start up
+    ui->pushButton_13->setVisible(false);
     ui->label->setVisible(false);
-    ui->label_2->setVisible(false);
-    ui->label_3->setVisible(false);
-    ui->label_4->setVisible(false);
-    ui->label_5->setVisible(false);
-    ui->label_6->setVisible(false);
     ui->label_8->setVisible(false);
     ui->label_9->setVisible(false);
     ui->label_10->setVisible(false);
@@ -62,10 +43,11 @@ MainWindow::MainWindow(QWidget *parent)
     ui->label_12->setVisible(false);
     ui->label_14->setVisible(false);
     ui->label_tx->setVisible(false);
-    ui->label_18->setVisible(false);
-    ui->label_19->setVisible(false);
-    ui->label_20->setVisible(false);
     ui->label_11->setVisible(false);
+    ui->verticalSlider->setVisible(false);
+    ui->HistoryView->setVisible(false);
+    ui->lineEdit_4->setVisible(false);
+    ui->pushButton_11->setVisible(false);
     ui->pushButton_9->setVisible(false);
     ui->groupBox_4->setVisible(false);
     ui->lineEdit_2->setVisible(false);
@@ -75,20 +57,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->label_22->setVisible(false);
     ui->label_24->setVisible(false);
     ui->lineEdit_3->setVisible(false);
-
-          ui->label_18->setPixmap(poc);
-          ui->label_19->setPixmap(poc1);
-          ui->label_2->setPixmap(poc2);
-          ui->label_20->setPixmap(poc8);
-          ui->label_3->setPixmap(poc4);
-          ui->label_4->setPixmap(poc5);
-          ui->label_5->setPixmap(poc6);
-          ui->label_6->setPixmap(poc7);
-          ui->label->setPixmap(poc8);
-
-
-        ui->label->setPixmap(poc3);
-        ui->label->setVisible(true);
 
     //----------------------------
     ui->groupBox->setVisible(false);
@@ -102,7 +70,11 @@ MainWindow::MainWindow(QWidget *parent)
     ui->label_17->setText("0");
     ui->label_tx->setText(" ");
 
+    ui->verticalSlider->setValue(9);
 
+
+    QString pic = "pictures/4.jpg";
+    ui->Picture->setPixmap(pic);
 
 
 QString date = QDateTime::currentDateTime().toString("dd.MM.yyyy");
@@ -118,37 +90,83 @@ ui->label_9->setText(date);
 
 
 }
-QString time_comp; // Time compress
 
+
+void MainWindow::ChangeWidgColor(QString &color){
+   ui->pushButton->setStyleSheet(color);
+   ui->pushButton_2->setStyleSheet(color);
+   ui->pushButton_3->setStyleSheet(color);
+   ui->pushButton_4->setStyleSheet(color);
+   ui->pushButton_5->setStyleSheet(color);
+   ui->pushButton_6->setStyleSheet(color);
+   ui->groupBox->setStyleSheet(color);
+   ui->pushButton_7->setStyleSheet(color);
+   ui->pushButton_8->setStyleSheet(color);
+   ui->lineEdit->setStyleSheet(color);
+   ui->groupBox_2->setStyleSheet(color);
+   ui->groupBox_3->setStyleSheet(color);
+   ui->groupBox_4->setStyleSheet(color);
+   ui->pushButton_9->setStyleSheet(color);
+   ui->lineEdit_2->setStyleSheet(color);
+   ui->pushButton_10->setStyleSheet(color);
+   ui->lineEdit_4->setStyleSheet(color);
+   ui->pushButton_11->setStyleSheet(color);
+   ui->lineEdit_3->setStyleSheet(color);
+   ui->pushButton_12->setStyleSheet(color);
+   ui->pushButton_13->setStyleSheet(color);
+
+}
+
+// Text
+void MainWindow::ChangeWidgStyle(QString &ColorStyle){
+
+    ui->label_8->setStyleSheet(ColorStyle);
+    ui->label_9->setStyleSheet(ColorStyle);
+    ui->label_16->setStyleSheet(ColorStyle);
+    ui->label_17->setStyleSheet(ColorStyle);
+    ui->label_13->setStyleSheet(ColorStyle);
+    ui->label_15->setStyleSheet(ColorStyle);
+    ui->label_12->setStyleSheet(ColorStyle);
+    ui->label_14->setStyleSheet(ColorStyle);
+    ui->label_10->setStyleSheet(ColorStyle);
+    ui->label_tx->setStyleSheet(ColorStyle);
+    ui->label_11->setStyleSheet(ColorStyle);
+    ui->label_21->setStyleSheet(ColorStyle);
+    ui->label_22->setStyleSheet(ColorStyle);
+    ui->label_23->setStyleSheet(ColorStyle);
+    ui->groupBox_4->setStyleSheet(ColorStyle);
+    ui->groupBox->setStyleSheet(ColorStyle);
+    ui->groupBox_2->setStyleSheet(ColorStyle);
+    ui->groupBox_3->setStyleSheet(ColorStyle);
+
+}
 
 MainWindow::~MainWindow()
 {
-
-
-
     delete ui;
 }
+    QString namef;
+    QString FileExtens = "*.txt";
+    QString FileOnOutput = ".txt";
+    QString time_comp; // Time compress
+    QString ThisPathAfterCompress = QDir::currentPath() + "/Source/";
+    QString FileNameAfterUnCompress = "Uncompress";
+    QString FileNameAfterCompress;
 
-    QString file_name_unk = "Uncompress"; // qUnk
-    QString name_file; // qCom
 
-
- QDir dir("C:/Users/User/Desktop/Maloru");
 
 void MainWindow::updateTime(){
 
   ui->label_8->setText(QTime::currentTime().toString());
-  if(ui->label_8->text() == time_comp){
-ui->label_11->setText("Hel");
+   if(ui->label_8->text() == time_comp){
+    ui->label_11->setText("Nope");
+    // Here called compress fonc (push button 4)
   }
 
+   // Level of compress
+   ui->label->setText(QString::number(ui->verticalSlider->value()));
 
-if(!dir.exists()){ dir.mkdir("Maloru");}
-
-
-
-
-  name_file = ui->lineEdit->text();
+   FileNameAfterCompress = ui->lineEdit->text();
 }
 
 
@@ -160,328 +178,70 @@ void MainWindow::on_pushButton_clicked()
     ui->groupBox->setVisible(false);
     }
 
-    else {
-        ui->groupBox->setVisible(true);
-    }
-
+    else {  ui->groupBox->setVisible(true);  }
 }
 
 
 void MainWindow::on_radioButton_2_clicked()
 {
-    QString color2 = "* { background-color:  qlineargradient(spread:pad, x1:0.478, y1:1, x2:0.489112, y2:0, stop:0 rgba(162, 225, 214, 11), stop:0.488764 rgba(213, 75, 127, 166), stop:1 rgba(50, 81, 76, 66))}";
-    //-------------------------------
-ui->pushButton->setStyleSheet(color2);
-ui->pushButton_2->setStyleSheet(color2);
- ui->pushButton_3->setStyleSheet(color2);
-   ui->pushButton_4->setStyleSheet(color2);
- ui->pushButton_5->setStyleSheet(color2);
- ui->pushButton_6->setStyleSheet(color2);
-ui->groupBox->setStyleSheet(color2);
-ui->pushButton_7->setStyleSheet(color2);
-ui->pushButton_8->setStyleSheet(color2);
-   ui->lineEdit->setStyleSheet(color2);
-   ui->groupBox_2->setStyleSheet(color2);
-   ui->groupBox_3->setStyleSheet(color2);
-   ui->groupBox_4->setStyleSheet(color2);
-   ui->pushButton_9->setStyleSheet(color2);
-   ui->lineEdit_2->setStyleSheet(color2);
-   ui->pushButton_10->setStyleSheet(color2);
-//------------------------------------
-    ui->label->setVisible(false);
-    ui->label_2->setVisible(true);
-    ui->label_3->setVisible(false);
-    ui->label_4->setVisible(false);
-    ui->label_5->setVisible(false);
-    ui->label_6->setVisible(false);
-    ui->label_18->setVisible(false);
-     ui->label_19->setVisible(false);
-     ui->label_20->setVisible(false);
-    //-----------------------------
+      QString color2 = "* {background-color: qlineargradient(spread:pad, x1:0.481, y1:1, x2:0.464, y2:0.045, stop:0 rgba(174, 229, 235, 0), stop:0.50838 rgba(96, 96, 111, 164), stop:0.938547 rgba(235, 148, 61, 0))}";
+      ChangeWidgColor(color2);
 
-     QString ColorStyle = "color: rgb(255, 170, 255);";
-
-      ui->label_8->setStyleSheet(ColorStyle);
-      ui->label_9->setStyleSheet(ColorStyle);
-      ui->label_16->setStyleSheet(ColorStyle);
-      ui->label_17->setStyleSheet(ColorStyle);
-      ui->label_13->setStyleSheet(ColorStyle);
-      ui->label_15->setStyleSheet(ColorStyle);
-      ui->label_12->setStyleSheet(ColorStyle);
-      ui->label_14->setStyleSheet(ColorStyle);
-      ui->label_10->setStyleSheet(ColorStyle);
-      ui->label_tx->setStyleSheet(ColorStyle);
-      ui->label_11->setStyleSheet(ColorStyle);
-      ui->label_21->setStyleSheet(ColorStyle);
-      ui->label_22->setStyleSheet(ColorStyle);
-      ui->label_23->setStyleSheet(ColorStyle);
-      
-
+      QString ColorStyle = "color: rgb(255, 255, 255);";
+      ChangeWidgStyle(ColorStyle);
 }
 
 
-void MainWindow::on_groupBox_clicked()
-{
-
-}
+void MainWindow::on_groupBox_clicked(){}
 
 
 void MainWindow::on_radioButton_clicked()
 {
-    QString color1 = "* { background-color:   qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0))}";
-    //-------------------------------
-ui->pushButton->setStyleSheet(color1);
-ui->pushButton_2->setStyleSheet(color1);
- ui->pushButton_3->setStyleSheet(color1);
-   ui->pushButton_4->setStyleSheet(color1);
- ui->pushButton_5->setStyleSheet(color1);
- ui->pushButton_6->setStyleSheet(color1);
-ui->groupBox->setStyleSheet(color1);
-ui->pushButton_7->setStyleSheet(color1);
-ui->pushButton_8->setStyleSheet(color1);
-   ui->lineEdit->setStyleSheet(color1);
-   ui->groupBox_2->setStyleSheet(color1);
-   ui->groupBox_3->setStyleSheet(color1);
-   ui->groupBox_4->setStyleSheet(color1);
-   ui->pushButton_9->setStyleSheet(color1);
-   ui->lineEdit_2->setStyleSheet(color1);
-    ui->pushButton_10->setStyleSheet(color1);
-//------------------------------------
-    ui->label->setVisible(true);
-    ui->label_2->setVisible(false);
-    ui->label_3->setVisible(false);
-    ui->label_4->setVisible(false);
-    ui->label_5->setVisible(false);
-    ui->label_6->setVisible(false);
-     ui->label_20->setVisible(false);
-     ui->label_18->setVisible(false);
-      ui->label_19->setVisible(false);
-      // -----------------
+      QString color1 = "* { background-color:   qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(176, 225, 216, 175), stop:0.994382 rgba(0, 0, 0, 0))}";
+      ChangeWidgColor(color1);
 
-      QString ColorStyle = "color: rgb(0, 0, 0);";
-
-       ui->label_8->setStyleSheet(ColorStyle);
-       ui->label_9->setStyleSheet(ColorStyle);
-       ui->label_16->setStyleSheet(ColorStyle);
-       ui->label_17->setStyleSheet(ColorStyle);
-       ui->label_13->setStyleSheet(ColorStyle);
-       ui->label_15->setStyleSheet(ColorStyle);
-       ui->label_12->setStyleSheet(ColorStyle);
-       ui->label_14->setStyleSheet(ColorStyle);
-       ui->label_10->setStyleSheet(ColorStyle);
-       ui->label_tx->setStyleSheet(ColorStyle);
-       ui->label_11->setStyleSheet(ColorStyle);
-       ui->label_21->setStyleSheet(ColorStyle);
-       ui->label_22->setStyleSheet(ColorStyle);
-       ui->label_23->setStyleSheet(ColorStyle);
-
-
+      QString ColorStyle = "color: rgb(255, 255, 255);";
+      ChangeWidgStyle(ColorStyle);
 }
 
 
 void MainWindow::on_radioButton_3_clicked()
 {
-    QString color3 = "* { background-color:   qlineargradient(spread:pad, x1:0.478, y1:1, x2:0.489112, y2:0, stop:0 rgba(162, 225, 214, 11), stop:0.488764 rgba(213, 80, 68, 166), stop:1 rgba(50, 81, 76, 66))}";
-    ui->pushButton->setStyleSheet(color3);
-    ui->pushButton_2->setStyleSheet(color3);
-     ui->pushButton_3->setStyleSheet(color3);
-       ui->pushButton_4->setStyleSheet(color3);
-     ui->pushButton_5->setStyleSheet(color3);
-     ui->pushButton_6->setStyleSheet(color3);
-    ui->groupBox->setStyleSheet(color3);
-    ui->pushButton_7->setStyleSheet(color3);
-    ui->pushButton_8->setStyleSheet(color3);
-       ui->lineEdit->setStyleSheet(color3);
-       ui->groupBox_2->setStyleSheet(color3);
-       ui->groupBox_3->setStyleSheet(color3);
-       ui->groupBox_4->setStyleSheet(color3);
-       ui->pushButton_9->setStyleSheet(color3);
-       ui->lineEdit_2->setStyleSheet(color3);
-        ui->pushButton_10->setStyleSheet(color3);
+    QString color3 = "* { background-color: qlineargradient(spread:pad, x1:0.481, y1:1, x2:0.464, y2:0.045, stop:0 rgba(174, 229, 235, 0), stop:0.50838 rgba(70, 71, 111, 164), stop:0.938547 rgba(235, 148, 61, 0))}";
+    ChangeWidgColor(color3);
 
-    ui->label->setVisible(false);
-    ui->label_2->setVisible(false);
-    ui->label_3->setVisible(true);
-    ui->label_4->setVisible(false);
-     ui->label_20->setVisible(false);
-    ui->label_5->setVisible(false);
-    ui->label_6->setVisible(false);
-    ui->label_18->setVisible(false);
-     ui->label_19->setVisible(false);
-
-     // -----------------------
-    QString ColorStyle = "color: rgb(255, 85, 0);";
-
-     ui->label_8->setStyleSheet(ColorStyle);
-     ui->label_9->setStyleSheet(ColorStyle);
-     ui->label_16->setStyleSheet(ColorStyle);
-     ui->label_17->setStyleSheet(ColorStyle);
-     ui->label_13->setStyleSheet(ColorStyle);
-     ui->label_15->setStyleSheet(ColorStyle);
-     ui->label_12->setStyleSheet(ColorStyle);
-     ui->label_14->setStyleSheet(ColorStyle);
-     ui->label_10->setStyleSheet(ColorStyle);
-     ui->label_tx->setStyleSheet(ColorStyle);
-     ui->label_11->setStyleSheet(ColorStyle);
-     ui->label_21->setStyleSheet(ColorStyle);
-     ui->label_22->setStyleSheet(ColorStyle);
-     ui->label_23->setStyleSheet(ColorStyle);
-
-
+    QString ColorStyle = "color: rgb(255, 255, 255);";
+    ChangeWidgStyle(ColorStyle);
 }
 
 
 void MainWindow::on_radioButton_4_clicked()
 {
-    QString color4 = "* { background-color: qlineargradient(spread:pad, x1:0.478, y1:1, x2:0.489112, y2:0, stop:0 rgba(218, 225, 66, 11), stop:0.488764 rgba(189, 195, 62, 166), stop:1 rgba(50, 81, 76, 66))}";
-    ui->pushButton->setStyleSheet(color4);
-    ui->pushButton_2->setStyleSheet(color4);
-     ui->pushButton_3->setStyleSheet(color4);
-       ui->pushButton_4->setStyleSheet(color4);
-     ui->pushButton_5->setStyleSheet(color4);
-     ui->pushButton_6->setStyleSheet(color4);
-     ui->pushButton_7->setStyleSheet(color4);
-     ui->pushButton_8->setStyleSheet(color4);
-        ui->lineEdit->setStyleSheet(color4);
-    ui->groupBox->setStyleSheet(color4);
-    ui->groupBox_2->setStyleSheet(color4);
-    ui->groupBox_3->setStyleSheet(color4);
-    ui->groupBox_4->setStyleSheet(color4);
-    ui->pushButton_9->setStyleSheet(color4);
-    ui->lineEdit_2->setStyleSheet(color4);
-     ui->pushButton_10->setStyleSheet(color4);
+     QString color4 = "* { background-color: qlineargradient(spread:pad, x1:0.481, y1:1, x2:0.464, y2:0.045, stop:0 rgba(106, 227, 241, 0), stop:0.50838 rgba(68, 228, 255, 207), stop:0.938547 rgba(235, 148, 61, 0))}";
+     ChangeWidgColor(color4);
 
-    ui->label->setVisible(false);
-    ui->label_2->setVisible(false);
-    ui->label_3->setVisible(false);
-    ui->label_4->setVisible(true);
-    ui->label_5->setVisible(false);
-     ui->label_20->setVisible(false);
-    ui->label_6->setVisible(false);
-    ui->label_18->setVisible(false);
-     ui->label_19->setVisible(false);
-
-     // --------
-
-     QString ColorStyle = "color: rgb(249, 255, 144);";
-
-      ui->label_8->setStyleSheet(ColorStyle);
-      ui->label_9->setStyleSheet(ColorStyle);
-      ui->label_16->setStyleSheet(ColorStyle);
-      ui->label_17->setStyleSheet(ColorStyle);
-      ui->label_13->setStyleSheet(ColorStyle);
-      ui->label_15->setStyleSheet(ColorStyle);
-      ui->label_12->setStyleSheet(ColorStyle);
-      ui->label_14->setStyleSheet(ColorStyle);
-      ui->label_10->setStyleSheet(ColorStyle);
-      ui->label_tx->setStyleSheet(ColorStyle);
-      ui->label_11->setStyleSheet(ColorStyle);
-      ui->label_21->setStyleSheet(ColorStyle);
-      ui->label_22->setStyleSheet(ColorStyle);
-      ui->label_23->setStyleSheet(ColorStyle);
+     QString ColorStyle = "color: rgb(255, 255, 255);";
+     ChangeWidgStyle(ColorStyle);
 }
 
 
 void MainWindow::on_radioButton_5_clicked()
 {
+     QString color5 = "* { background-color: qlineargradient(spread:pad, x1:0.481, y1:1, x2:0.464, y2:0.045, stop:0 rgba(106, 227, 241, 0), stop:0.50838 rgba(151, 91, 255, 134), stop:0.938547 rgba(235, 148, 61, 0))}";
+     ChangeWidgColor(color5);
 
-    QString color5 = "* { background-color: qlineargradient(spread:pad, x1:0.478, y1:1, x2:0.489112, y2:0, stop:0 rgba(225, 66, 192, 11), stop:0.488764 rgba(223, 14, 180, 188), stop:1 rgba(50, 81, 76, 66))}";
-    ui->pushButton->setStyleSheet(color5);
-    ui->pushButton_2->setStyleSheet(color5);
-     ui->pushButton_3->setStyleSheet(color5);
-       ui->pushButton_4->setStyleSheet(color5);
-     ui->pushButton_5->setStyleSheet(color5);
-     ui->pushButton_6->setStyleSheet(color5);
-    ui->groupBox->setStyleSheet(color5);
-    ui->pushButton_7->setStyleSheet(color5);
-    ui->pushButton_8->setStyleSheet(color5);
-       ui->lineEdit->setStyleSheet(color5);
-       ui->groupBox_2->setStyleSheet(color5);
-       ui->groupBox_3->setStyleSheet(color5);
-       ui->groupBox_4->setStyleSheet(color5);
-       ui->pushButton_9->setStyleSheet(color5);
-       ui->lineEdit_2->setStyleSheet(color5);
-        ui->pushButton_10->setStyleSheet(color5);
-
-    ui->label->setVisible(false);
-    ui->label_2->setVisible(false);
-    ui->label_3->setVisible(false);
-    ui->label_4->setVisible(false);
-    ui->label_5->setVisible(true);
-     ui->label_20->setVisible(false);
-    ui->label_6->setVisible(false);
-    ui->label_18->setVisible(false);
-     ui->label_19->setVisible(false);
-     //---------------
-     QString ColorStyle = "color: rgb(0, 0, 0);";
-
-      ui->label_8->setStyleSheet(ColorStyle);
-      ui->label_9->setStyleSheet(ColorStyle);
-      ui->label_16->setStyleSheet(ColorStyle);
-      ui->label_17->setStyleSheet(ColorStyle);
-      ui->label_13->setStyleSheet(ColorStyle);
-      ui->label_15->setStyleSheet(ColorStyle);
-      ui->label_12->setStyleSheet(ColorStyle);
-      ui->label_14->setStyleSheet(ColorStyle);
-      ui->label_10->setStyleSheet(ColorStyle);
-      ui->label_tx->setStyleSheet(ColorStyle);
-      ui->label_11->setStyleSheet(ColorStyle);
-      ui->label_21->setStyleSheet(ColorStyle);
-      ui->label_22->setStyleSheet(ColorStyle);
-      ui->label_23->setStyleSheet(ColorStyle);
-
+     QString ColorStyle = "color: rgb(255, 255, 255);";
+     ChangeWidgStyle(ColorStyle);
 }
 
 
 void MainWindow::on_radioButton_6_clicked()
 {
-
     QString color6 = "* { background-color:  qlineargradient(spread:pad, x1:0.478, y1:1, x2:0.489112, y2:0, stop:0 rgba(225, 66, 205, 11), stop:0.488764 rgba(4, 61, 69, 188), stop:1 rgba(50, 81, 76, 66))}";
-    ui->pushButton->setStyleSheet(color6);
-    ui->pushButton_2->setStyleSheet(color6);
-     ui->pushButton_3->setStyleSheet(color6);
-       ui->pushButton_4->setStyleSheet(color6);
-     ui->pushButton_5->setStyleSheet(color6);
-     ui->pushButton_6->setStyleSheet(color6);
-    ui->groupBox->setStyleSheet(color6);
-    ui->pushButton_7->setStyleSheet(color6);
-    ui->pushButton_8->setStyleSheet(color6);
-       ui->lineEdit->setStyleSheet(color6);
-       ui->groupBox_2->setStyleSheet(color6);
-       ui->groupBox_3->setStyleSheet(color6);
-       ui->groupBox_4->setStyleSheet(color6);
-       ui->pushButton_9->setStyleSheet(color6);
-       ui->lineEdit_2->setStyleSheet(color6);
-        ui->pushButton_10->setStyleSheet(color6);
+    ChangeWidgColor(color6);
 
-    ui->label->setVisible(false);
-    ui->label_2->setVisible(false);
-    ui->label_3->setVisible(false);
-    ui->label_4->setVisible(false);
-    ui->label_5->setVisible(false);
-    ui->label_6->setVisible(true);
-     ui->label_20->setVisible(false);
-     ui->label_18->setVisible(false);
-      ui->label_19->setVisible(false);
-
-      QString ColorStyle = "color: rgb(0, 85, 127);";
-
-       ui->label_8->setStyleSheet(ColorStyle);
-       ui->label_9->setStyleSheet(ColorStyle);
-       ui->label_16->setStyleSheet(ColorStyle);
-       ui->label_17->setStyleSheet(ColorStyle);
-       ui->label_13->setStyleSheet(ColorStyle);
-       ui->label_15->setStyleSheet(ColorStyle);
-       ui->label_12->setStyleSheet(ColorStyle);
-       ui->label_14->setStyleSheet(ColorStyle);
-       ui->label_10->setStyleSheet(ColorStyle);
-       ui->label_tx->setStyleSheet(ColorStyle);
-       ui->label_11->setStyleSheet(ColorStyle);
-       ui->label_21->setStyleSheet(ColorStyle);
-       ui->label_22->setStyleSheet(ColorStyle);
-       ui->label_23->setStyleSheet(ColorStyle);
-
-
+      QString ColorStyle = "color: rgb(255, 255, 255);";
+      ChangeWidgStyle(ColorStyle);
 }
 
 
@@ -491,9 +251,7 @@ void MainWindow::on_pushButton_3_clicked()
      QDesktopServices::openUrl(QUrl("https://t.me/onlyinc", QUrl::TolerantMode));
 }
 
-    QString namef;
-    QString FileExtens = "*.txt";
-    QString FileOnOutput = ".txt";
+
 
 void MainWindow::on_pushButton_2_clicked()
 {
@@ -509,6 +267,10 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_pushButton_4_clicked()
 {
+
+    qDebug() << ThisPathAfterCompress;
+    qDebug() << QDir::currentPath();
+
     if(ui->label_tx->text() == " "){
      ui->checkBox_5->setChecked(true);
      ui->label_10->setVisible(true);
@@ -523,6 +285,13 @@ void MainWindow::on_pushButton_4_clicked()
 
     QFile filed(namef); // Create file
     qDebug() << namef; // show in console name
+
+    // Add at Text Browser
+    ui->HistoryView->append(namef + " [" + ui->label_8->text() + "] " + "[" + ui->label_9->text() + "]" ); // add to History
+
+    // Write to file history logs
+  //  QFile Logs("HistoryLogs.txt");
+
 
 
     QString str_st; // amount of words
@@ -577,57 +346,34 @@ void MainWindow::on_pushButton_4_clicked()
 
     // --------- Output
 
-   float outp = size / 224;
+    float outp = size / 224;
     QString outp_str; // type date
-QString outpp = QString::number(outp); // int to string
+    QString outpp = QString::number(outp); // int to string
 
-if  (outp >= 1000000){
-outp_str = "Mb";
-}
-
-if (outp >= 1000 && outp < 1000000){
-
-    outp_str = "Kb";
-}
-
-if(outp < 1000){
-outp_str = "Byte";
-}
-
+if  (outp >= 1000000){ outp_str = "Mb"; }
+if (outp >= 1000 && outp < 1000000){  outp_str = "Kb"; }
+if(outp < 1000){  outp_str = "Byte"; }
 
 ui->label_17->setText("Somewhere: " + outpp + " " + outp_str);
 
-
-
-if(ui->checkBox_10->isChecked()){
-
-}
-
 QFile fi(namef);
-QFile fo("C:/Users/User/Desktop/" + name_file + ".cm");
+QFile fo(ThisPathAfterCompress + FileNameAfterCompress + ".cm");// Make file after compress
 
 if(fi.open(QFile::ReadOnly) && fo.open(QFile::WriteOnly)){
-    int compress_level = 9;
-    fo.write(qCompress(fi.readAll(), compress_level));
+    fo.write(qCompress(fi.readAll(), ui->verticalSlider->value()));
 
     fi.close();
     fo.close();
-
 }
-
-
-
-
 
 } // button
 
 } // else
 
 
+
 void MainWindow::on_pushButton_7_clicked()
 {
-
-    // --------------------
     if(ui->groupBox_2->isVisible() && ui->groupBox_3->isVisible()){
     ui->groupBox_2->setVisible(false);
     ui->groupBox_3->setVisible(false);
@@ -638,12 +384,9 @@ void MainWindow::on_pushButton_7_clicked()
     ui->groupBox_2->setVisible(false);
     }
 
-    else {
-
-        ui->groupBox_2->setVisible(true);
-    }
+    else {   ui->groupBox_2->setVisible(true);  }
 }
-    // -------------
+
 
 qDebug() << "Process: Additionally";
 
@@ -652,40 +395,24 @@ qDebug() << "Process: Additionally";
 
 void MainWindow::on_checkBox_clicked()
 {
-    if(ui->label_8->isVisible()){
-    ui->label_8->setVisible(false);
-    }
-
-    else{
-        ui->label_8->setVisible(true);
-    }
-
-
+    if(ui->label_8->isVisible()){  ui->label_8->setVisible(false); }
+    else{ ui->label_8->setVisible(true); }
 }
 
 
 void MainWindow::on_checkBox_4_clicked()
 {
-    if(ui->label_9->isVisible()){
-        ui->label_9->setVisible(false);
-    }
-    else{
-        ui->label_9->setVisible(true);
-    }
+    if(ui->label_9->isVisible()){  ui->label_9->setVisible(false); }
+    else{ ui->label_9->setVisible(true); }
 }
 
 
 void MainWindow::on_checkBox_2_clicked()
 {
-
     if(ui->checkBox_2->isChecked() && ui->groupBox_2->isVisible()){
         ui->groupBox_3->setVisible(true);
-
     }
-    else{
-   ui->groupBox_3->setVisible(false);
-    }
-
+    else{ ui->groupBox_3->setVisible(false); }
 }
 
 
@@ -712,13 +439,11 @@ void MainWindow::on_checkBox_5_clicked()
     ui->label_10->setVisible(true);
       ui->label_tx->setVisible(true);
     }
-
 }
 
 
 void MainWindow::on_checkBox_7_clicked()
 {
-
     if(ui->label_24->isVisible()){
     ui->label_24->setVisible(false);
     ui->lineEdit_3->setVisible(false);
@@ -727,7 +452,6 @@ void MainWindow::on_checkBox_7_clicked()
         ui->label_24->setVisible(true);
         ui->lineEdit_3->setVisible(true);
     }
-
 }
 
 
@@ -746,8 +470,6 @@ ui->label_15->setVisible(true);
 
 void MainWindow::on_checkBox_8_clicked()
 {
-
-
     if(ui->label_12->isVisible()){ // text
     ui->label_12->setVisible(false);
     ui->label_14->setVisible(false);
@@ -762,8 +484,13 @@ void MainWindow::on_checkBox_8_clicked()
 void MainWindow::on_pushButton_5_clicked()
 {
 
-
-
+    if(ui->HistoryView->isVisible()){
+        ui->HistoryView->setVisible(false);
+        ui->pushButton_13->setVisible(false);
+    }
+    else{
+        ui->HistoryView->setVisible(true);
+        ui->pushButton_13->setVisible(true); }
 
 
     qDebug() << "Process: History";
@@ -786,64 +513,21 @@ void MainWindow::on_checkBox_9_clicked()
 void MainWindow::on_radioButton_7_clicked()
 {
     QString color18 = "background-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(255, 5, 73, 170), stop:0.994382 rgba(0, 0, 0, 0))";
+    ChangeWidgColor(color18);
 
-    ui->pushButton->setStyleSheet(color18);
-    ui->pushButton_2->setStyleSheet(color18);
-     ui->pushButton_3->setStyleSheet(color18);
-       ui->pushButton_4->setStyleSheet(color18);
-     ui->pushButton_5->setStyleSheet(color18);
-     ui->pushButton_6->setStyleSheet(color18);
-    ui->groupBox->setStyleSheet(color18);
-    ui->pushButton_7->setStyleSheet(color18);
-    ui->pushButton_8->setStyleSheet(color18);
-       ui->lineEdit->setStyleSheet(color18);
-       ui->groupBox_2->setStyleSheet(color18);
-       ui->groupBox_3->setStyleSheet(color18);
-       ui->groupBox_4->setStyleSheet(color18);
-       ui->pushButton_9->setStyleSheet(color18);
-       ui->lineEdit_2->setStyleSheet(color18);
-        ui->pushButton_10->setStyleSheet(color18);
-
-
-    ui->label_18->setVisible(false);
-     ui->label_19->setVisible(false);
-    ui->label_20->setVisible(true);
-    ui->label->setVisible(false);
-    ui->label_2->setVisible(false);
-    ui->label_3->setVisible(false);
-    ui->label_4->setVisible(false);
-    ui->label_5->setVisible(false);
-    ui->label_6->setVisible(false);
-
-    // ------
-
-    QString ColorStyle = "color: rgb(255, 85, 127);";
-
-     ui->label_8->setStyleSheet(ColorStyle);
-     ui->label_9->setStyleSheet(ColorStyle);
-     ui->label_16->setStyleSheet(ColorStyle);
-     ui->label_17->setStyleSheet(ColorStyle);
-     ui->label_13->setStyleSheet(ColorStyle);
-     ui->label_15->setStyleSheet(ColorStyle);
-     ui->label_12->setStyleSheet(ColorStyle);
-     ui->label_14->setStyleSheet(ColorStyle);
-     ui->label_10->setStyleSheet(ColorStyle);
-     ui->label_tx->setStyleSheet(ColorStyle);
-     ui->label_11->setStyleSheet(ColorStyle);
-     ui->label_21->setStyleSheet(ColorStyle);
-     ui->label_22->setStyleSheet(ColorStyle);
-     ui->label_23->setStyleSheet(ColorStyle);
-
+    QString ColorStyle = "color: rgb(255, 255, 255);";
+    ChangeWidgStyle(ColorStyle);
 }
 
 
-
+// File Unzip
 void MainWindow::on_pushButton_6_clicked()
 {
 
-    qDebug() << "Process: Unzip";
+    // Select .cm file
     QString name_unz = QFileDialog::getOpenFileName(0, "Select file", "", "*.cm");
 
+    // File read
     QFile fille(name_unz);
     if(!fille.open(QIODevice::ReadOnly))
         return;
@@ -851,14 +535,14 @@ void MainWindow::on_pushButton_6_clicked()
       QByteArray compressed = fille.readAll();
       qDebug() << "Compresed=" << compressed.size();
 
-    QByteArray unkom = qUncompress(compressed);
-     qDebug() << "UnCompresed=" << unkom.size();
+      QByteArray unkom = qUncompress(compressed);
+      qDebug() << "UnCompresed=" << unkom.size();
 
-     QFile unk("C:/Users/User/Desktop/" + file_name_unk + FileOnOutput);
+     // Unzip in this place
+     QFile unk("D:/Neptuns" + FileNameAfterUnCompress + FileOnOutput);
      unk.open(QIODevice::WriteOnly);
      unk.write(unkom);
      unk.close();
-
 
 
     fille.remove();
@@ -868,138 +552,44 @@ void MainWindow::on_pushButton_6_clicked()
 void MainWindow::on_pushButton_8_clicked()
 {
     qDebug() << "Procces: Time Compress";
-
     ui->lineEdit_2->setText(QTime::currentTime().toString());
 
     if(ui->label_11->isVisible()){
-ui->label_11->setVisible(false);
-ui->pushButton_9->setVisible(false);
-ui->lineEdit_2->setVisible(false);
-    }else{
+    ui->label_11->setVisible(false);
+    ui->pushButton_9->setVisible(false);
+    ui->lineEdit_2->setVisible(false);
+    }
+    else{
         ui->label_11->setVisible(true);
         ui->pushButton_9->setVisible(true);
         ui->lineEdit_2->setVisible(true);
     }
-
-
 }
 
 
 void MainWindow::on_radioButton_8_clicked()
 {
         QString color18 = "background-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(0, 159, 255, 170), stop:0.994382 rgba(0, 0, 0, 0));";
+        ChangeWidgColor(color18);
 
-        ui->pushButton->setStyleSheet(color18);
-        ui->pushButton_2->setStyleSheet(color18);
-         ui->pushButton_3->setStyleSheet(color18);
-           ui->pushButton_4->setStyleSheet(color18);
-         ui->pushButton_5->setStyleSheet(color18);
-         ui->pushButton_6->setStyleSheet(color18);
-        ui->groupBox->setStyleSheet(color18);
-        ui->pushButton_7->setStyleSheet(color18);
-        ui->pushButton_8->setStyleSheet(color18);
-           ui->lineEdit->setStyleSheet(color18);
-           ui->groupBox_2->setStyleSheet(color18);
-           ui->groupBox_3->setStyleSheet(color18);
-           ui->groupBox_4->setStyleSheet(color18);
-           ui->pushButton_9->setStyleSheet(color18);
-           ui->lineEdit_2->setStyleSheet(color18);
-            ui->pushButton_10->setStyleSheet(color18);
-
-    ui->label_18->setVisible(false);
-    ui->label_19->setVisible(true);
-    ui->label->setVisible(false);
-    ui->label_2->setVisible(false);
-    ui->label_20->setVisible(false);
-    ui->label_3->setVisible(false);
-    ui->label_4->setVisible(false);
-    ui->label_5->setVisible(false);
-    ui->label_6->setVisible(false);
-
-    // ----------
-
-    QString ColorStyle = "color: rgb(170, 255, 255);";
-
-     ui->label_8->setStyleSheet(ColorStyle);
-     ui->label_9->setStyleSheet(ColorStyle);
-     ui->label_16->setStyleSheet(ColorStyle);
-     ui->label_17->setStyleSheet(ColorStyle);
-     ui->label_13->setStyleSheet(ColorStyle);
-     ui->label_15->setStyleSheet(ColorStyle);
-     ui->label_12->setStyleSheet(ColorStyle);
-     ui->label_14->setStyleSheet(ColorStyle);
-     ui->label_10->setStyleSheet(ColorStyle);
-     ui->label_tx->setStyleSheet(ColorStyle);
-     ui->label_11->setStyleSheet(ColorStyle);
-     ui->label_21->setStyleSheet(ColorStyle);
-     ui->label_22->setStyleSheet(ColorStyle);
-     ui->label_23->setStyleSheet(ColorStyle);
+        QString ColorStyle = "color: rgb(255, 255, 255);";
+        ChangeWidgStyle(ColorStyle);
 }
 
 
 void MainWindow::on_radioButton_9_clicked()
 {
+    QString color18 = "background-color: qlineargradient(spread:pad, x1:0.481, y1:1, x2:0.464, y2:0.045, stop:0 rgba(106, 227, 241, 0), stop:0.938547 rgba(235, 148, 61, 0));";
+    ChangeWidgColor(color18);
 
-    QString color18 = "background-color: qlineargradient(spread:pad, x1:0.522382, y1:0.955, x2:0.467, y2:0.063, stop:0 rgba(0, 0, 0, 0), stop:0.5 rgba(169, 255, 50, 175), stop:0.994382 rgba(0, 0, 0, 0));";
-    ui->pushButton->setStyleSheet(color18);
-    ui->pushButton_2->setStyleSheet(color18);
-     ui->pushButton_3->setStyleSheet(color18);
-       ui->pushButton_4->setStyleSheet(color18);
-     ui->pushButton_5->setStyleSheet(color18);
-     ui->pushButton_6->setStyleSheet(color18);
-    ui->groupBox->setStyleSheet(color18);
-    ui->pushButton_7->setStyleSheet(color18);
-    ui->pushButton_8->setStyleSheet(color18);
-    ui->lineEdit->setStyleSheet(color18);
-    ui->groupBox_2->setStyleSheet(color18);
-    ui->groupBox_3->setStyleSheet(color18);
-    ui->groupBox_4->setStyleSheet(color18);
-    ui->pushButton_9->setStyleSheet(color18);
-    ui->lineEdit_2->setStyleSheet(color18);
-     ui->pushButton_10->setStyleSheet(color18);
-
-    ui->label_19->setVisible(false);
-    ui->label->setVisible(false);
-    ui->label_2->setVisible(false);
-    ui->label_20->setVisible(false);
-    ui->label_3->setVisible(false);
-    ui->label_4->setVisible(false);
-    ui->label_5->setVisible(false);
-    ui->label_6->setVisible(false);
-    ui->label_18->setVisible(true);
-
-    //-----
-    QString ColorStyle = "color: rgb(170, 255, 0);";
-
-     ui->label_8->setStyleSheet(ColorStyle);
-     ui->label_9->setStyleSheet(ColorStyle);
-     ui->label_16->setStyleSheet(ColorStyle);
-     ui->label_17->setStyleSheet(ColorStyle);
-     ui->label_13->setStyleSheet(ColorStyle);
-     ui->label_15->setStyleSheet(ColorStyle);
-     ui->label_12->setStyleSheet(ColorStyle);
-     ui->label_14->setStyleSheet(ColorStyle);
-     ui->label_10->setStyleSheet(ColorStyle);
-     ui->label_tx->setStyleSheet(ColorStyle);
-     ui->label_11->setStyleSheet(ColorStyle);
-     ui->label_21->setStyleSheet(ColorStyle);
-     ui->label_22->setStyleSheet(ColorStyle);
-     ui->label_23->setStyleSheet(ColorStyle);
+    QString ColorStyle = "color: rgb(0, 0, 0);";
+    ChangeWidgStyle(ColorStyle);
 }
 
 // Symbols
-void MainWindow::on_checkBox_8_stateChanged(int arg1)
-{
+void MainWindow::on_checkBox_8_stateChanged(int arg1){}
 
-
-}
-
-
-void MainWindow::on_pushButton_9_clicked()
-{
- time_comp = ui->lineEdit_2->text();
-}
-
+void MainWindow::on_pushButton_9_clicked(){ time_comp = ui->lineEdit_2->text(); }
 
 void MainWindow::on_pushButton_10_clicked()
 {
@@ -1013,11 +603,7 @@ void MainWindow::on_pushButton_10_clicked()
     ui->label_22->setVisible(true);
     ui->label_23->setVisible(false);
     }
-
-
-
 }
-
 
 void MainWindow::on_radioButton_10_clicked()
 {
@@ -1073,6 +659,52 @@ void MainWindow::on_radioButton_15_clicked()
 
 void MainWindow::on_checkBox_10_clicked()
 {
-    QDir().mkdir("C:/Users/User/Desktop/Maloru");
+    QDir().mkdir("D:/Neptuns");
+}
+
+
+void MainWindow::on_checkBox_10_stateChanged(int arg1)
+{
+    if(ui->lineEdit_4->isVisible()){
+        ui->lineEdit_4->setVisible(false);
+        ui->pushButton_11->setVisible(false);
+    }
+    else{
+        ui->lineEdit_4->setVisible(true);
+        ui->pushButton_11->setVisible(true);
+    }
+}
+
+
+void MainWindow::on_pushButton_12_clicked()
+{
+    if( ui->verticalSlider->isVisible()){
+        ui->verticalSlider->setVisible(false);
+        ui->label->setVisible(false);
+    }
+    else{
+       ui->verticalSlider->setVisible(true);
+        ui->label->setVisible(true);
+    }
+}
+
+
+void MainWindow::on_pushButton_13_clicked()
+{
+    ui->HistoryView->clear();
+}
+
+
+void MainWindow::on_pushButton_11_clicked()
+{
+    ThisPathAfterCompress = ui->lineEdit_4->text();
+
+    for(int i = 0; i < ThisPathAfterCompress.size(); i++){
+        if(ThisPathAfterCompress[i] == '\\'){
+            ThisPathAfterCompress[i] = '/';
+        }
+    }
+    ThisPathAfterCompress += "/";
+
 }
 

@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     a.setWindowIcon(QIcon("pictures/3.png"));
 
     MainWindow w;
-    w.setWindowTitle("Comsize");
+    w.setWindowTitle("Neptun");
     w.show();
     return a.exec();
 
