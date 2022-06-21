@@ -395,7 +395,7 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string/>
@@ -1238,6 +1238,9 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
      <string>.txt</string>
     </property>
@@ -1246,7 +1249,7 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
     <property name="geometry">
      <rect>
       <x>710</x>
-      <y>450</y>
+      <y>440</y>
       <width>47</width>
       <height>13</height>
      </rect>
@@ -1259,7 +1262,7 @@ color: qlineargradient(spread:reflect, x1:1, y1:0.085, x2:0.628, y2:0.625, stop:
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>.txt</string>

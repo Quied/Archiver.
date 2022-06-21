@@ -57,14 +57,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->label_22->setVisible(false);
     ui->label_24->setVisible(false);
     ui->lineEdit_3->setVisible(false);
-
-    //----------------------------
     ui->groupBox->setVisible(false);
     ui->groupBox_2->setVisible(false);
     ui->groupBox_3->setVisible(false);
-    //--------------------------------
     ui->lineEdit->setVisible(false);
-    //-------------------------------
     ui->label_14->setText("0");
     ui->label_15->setText("0");
     ui->label_17->setText("0");
@@ -145,11 +141,11 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-    QString namef;
+    QString ChoisenFileForCompress;
     QString FileExtens = "*.txt";
     QString FileOnOutput = ".txt";
-    QString time_comp; // Time compress
-    QString ThisPathAfterCompress = QDir::currentPath() + "/Source/";
+    QString TimeWhenNeedCompress;
+    QString ThisPathAfterCompress = QDir::currentPath();
     QString FileNameAfterUnCompress = "Uncompress";
     QString FileNameAfterCompress;
 
@@ -158,9 +154,9 @@ MainWindow::~MainWindow()
 void MainWindow::updateTime(){
 
   ui->label_8->setText(QTime::currentTime().toString());
-   if(ui->label_8->text() == time_comp){
-    ui->label_11->setText("Nope");
-    // Here called compress fonc (push button 4)
+   if(ui->label_8->text() == TimeWhenNeedCompress){
+
+    MainWindow::on_pushButton_4_clicked();
   }
 
    // Level of compress
@@ -259,9 +255,7 @@ void MainWindow::on_pushButton_2_clicked()
     QString name = QFileDialog::getOpenFileName(0, "Select file", "", FileExtens);
     ui->label_tx->setText(name);
     ui->label_7->setText(" ");
-    namef = name;
-
-
+    ChoisenFileForCompress = name;
 }
 
 
@@ -283,31 +277,31 @@ void MainWindow::on_pushButton_4_clicked()
     qDebug() << "Process: Compress";
     QMap<char,int>mp; // For amount of symbols
 
-    QFile filed(namef); // Create file
-    qDebug() << namef; // show in console name
+    QFile filed(ChoisenFileForCompress); // Create file
+    qDebug() << "T: " << ChoisenFileForCompress; // show in console name
 
     // Add at Text Browser
-    ui->HistoryView->append(namef + " [" + ui->label_8->text() + "] " + "[" + ui->label_9->text() + "]" ); // add to History
+    ui->HistoryView->append(ChoisenFileForCompress + " [" + ui->label_8->text() + "] " + "[" + ui->label_9->text() + "]" ); // add to History
 
     // Write to file history logs
-  //  QFile Logs("HistoryLogs.txt");
+    QFile Logs("HistoryLogs.txt");
+    if((Logs.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text))){
+   //   Logs.write(ChoisenFileForCompress + " [" + ui->label_8->text() + "] " + "[" + ui->label_9->text() + "]");
+    }
 
 
 
     QString str_st; // amount of words
     qint64 am_str = 0;
-
     qint64 size = 0;
 
-    if ((filed.exists())&&(filed.open(QIODevice::ReadOnly))) // Read file
-    {
+    if ((filed.exists())&&(filed.open(QIODevice::ReadOnly))){ // Read file
 
     while(!filed.atEnd()){ // Amount of symbols
        QByteArray tmp;
        tmp = filed.readLine();
        size += tmp.size();
-
-}
+    }
        QTextStream in(&filed);
        while (!in.atEnd()) {
            in >> str_st;
@@ -337,11 +331,11 @@ void MainWindow::on_pushButton_4_clicked()
     dat = " Byte";
     }
 
-    QString sizefi = QString::number(sizefile); // float to string
+    QString sizefi = QString::number(sizefile);
     ui->label_15->setText(sizefi + dat);
 
-    QString s = QString::number(size); // int to string
-    ui->label_14->setText(s); // set text
+    QString s = QString::number(size);
+    ui->label_14->setText(s);
 
 
     // --------- Output
@@ -356,7 +350,7 @@ if(outp < 1000){  outp_str = "Byte"; }
 
 ui->label_17->setText("Somewhere: " + outpp + " " + outp_str);
 
-QFile fi(namef);
+QFile fi(ChoisenFileForCompress);
 QFile fo(ThisPathAfterCompress + FileNameAfterCompress + ".cm");// Make file after compress
 
 if(fi.open(QFile::ReadOnly) && fo.open(QFile::WriteOnly)){
@@ -493,6 +487,8 @@ void MainWindow::on_pushButton_5_clicked()
         ui->pushButton_13->setVisible(true); }
 
 
+    QByteArray ths {"dfsdgsdg"};
+  //  qDebug() << ths[4] = ths[1];
     qDebug() << "Process: History";
 }
 
@@ -539,7 +535,7 @@ void MainWindow::on_pushButton_6_clicked()
       qDebug() << "UnCompresed=" << unkom.size();
 
      // Unzip in this place
-     QFile unk("D:/Neptuns" + FileNameAfterUnCompress + FileOnOutput);
+     QFile unk(ThisPathAfterCompress + FileNameAfterUnCompress + FileOnOutput);
      unk.open(QIODevice::WriteOnly);
      unk.write(unkom);
      unk.close();
@@ -582,14 +578,14 @@ void MainWindow::on_radioButton_9_clicked()
     QString color18 = "background-color: qlineargradient(spread:pad, x1:0.481, y1:1, x2:0.464, y2:0.045, stop:0 rgba(106, 227, 241, 0), stop:0.938547 rgba(235, 148, 61, 0));";
     ChangeWidgColor(color18);
 
-    QString ColorStyle = "color: rgb(0, 0, 0);";
+    QString ColorStyle = "color: rgb(255, 255, 255);";
     ChangeWidgStyle(ColorStyle);
 }
 
 // Symbols
 void MainWindow::on_checkBox_8_stateChanged(int arg1){}
 
-void MainWindow::on_pushButton_9_clicked(){ time_comp = ui->lineEdit_2->text(); }
+void MainWindow::on_pushButton_9_clicked(){ TimeWhenNeedCompress = ui->lineEdit_2->text(); }
 
 void MainWindow::on_pushButton_10_clicked()
 {
